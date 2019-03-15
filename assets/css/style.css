@@ -1,0 +1,136 @@
+body {
+    background-color:grey;
+  }
+
+.encabezado {
+position: relative;
+   
+
+    height: 50px;
+  
+    width: 550px;
+    
+    background-color: powderblue;
+    text-align: center;
+  
+  
+}
+
+.instrucciones {
+    position: absolute;
+    left: 10px;
+    top: 70px;
+    height: 150px;
+  
+    width: 600px;
+    
+    background-color: orange;
+    text-align: left;
+    padding-left: 10px;
+
+  
+}
+
+.cuadroverde {
+    position: absolute;
+    
+left: 10px;
+    top: 250px;
+    height: 90px;
+  
+    width: 150px;
+    background-color: green;
+    text-align: left;
+    padding-left: 10px;
+  
+  
+}
+
+.cuadroscore1 {
+    position: absolute;
+    
+left: 180px;
+    top: 250px;
+    height: 90px;
+  
+    width: 100px;
+    background-color: lightseagreen;
+    text-align: left;
+    padding-left: 10px;
+  
+  
+}
+
+.imagenblanco {
+    
+    height: 80px;
+  
+    width: 80px;
+    background-color: white;
+    
+    vertical-align: middle;
+  
+}
+
+
+.totalscore {
+    position: absolute;
+    
+left: 10px;
+    top: 470px;
+    height: 20px;
+  
+    width: 150px;
+    background-color: rgb(80, 77, 240);
+    text-align: left;
+    padding-left: 10px;
+  
+  
+}
+
+.cuadroscoretotal {
+    position: absolute;
+    
+left: 10px;
+    top: 510px;
+    height: 40px;
+  
+    width: 150px;
+    background-color: rgb(80, 77, 240);
+    text-align: left;
+    padding-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+
+    color: white;
+}
+.pinstrucciones {
+    
+    color: black;
+ 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+padding-top: 15px;
+  
+
+  
+}
+
+.pscore {
+    
+    color: black;
+ 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+
+  
+
+.pencabezado {
+    
+    color: black;
+    text-shadow: 3px 2px rgb(156, 148, 148);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+
+  
+}

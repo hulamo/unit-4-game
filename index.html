@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <script src="assets/javascript/game.js"></script>
+</head>
+<body>
+    <div class="encabezado pencabezado">El Juego de los Diamantes
+</div>
+
+<div class="instrucciones pinstrucciones" >Instrucciones:
+    <p>En el cuadro Verde aparece un número, cada diamante tiene un valor, tu al presionar un diamante te va sumando sus puntos, si tu igualas el valor de la suma de los diamantes presionados al valor del cuadro verde ganas, si tu sobre pasas el valor del recuadro verde pierdes.</p>
+</div>
+
+<div class="cuadroverde pinstrucciones" id="puntos1">
+</div>
+
+<div class="cuadroscore1"><h6 id="ajugar">A jugar !!!</h6><h6 id="ganados">Ganados: 0</h6><h6 id="perdidos">Perdidos: 0</h6>
+    </div>  
+
+    <img img  data-valor='1' src="assets/images/rosa.jpg" id= "diamante1" class="imagenblanco" style="position:absolute; top:370px; "> 
+    <img img  data-valor='1' src="assets/images/azul.jpg" id= "diamante2" class="imagenblanco" style="position:absolute; top:370px; left:100px; "> 
+    <img img  data-valor='1' src="assets/images/verde.jpg" id= "diamante3" class="imagenblanco" style="position:absolute; top:370px; left:200px; "> 
+    <img img  data-valor='1' src="assets/images/morado.jpg" id= "diamante4" class="imagenblanco" style="position:absolute; top:370px; left:300px;">  
+
+    <div  class="totalscore pscore">Total Score
+    </div>  
+    
+    <div id="totals" class="cuadroscoretotal">0
+    </div>  
+    <script type="text/javascript">
+
+$(document).ready(function() {
+
+    var tu =0;
+    var compu=0;
+    var scoretotal=0;
+
+function resetear(){
+       scoretotal=0;
+    puntos=Math.floor((Math.random()*120)+1);
+
+    $("#puntos1").text(puntos);
+
+    $("#diamante1").data("valor", Math.floor((Math.random()*12)+1) );
+    $("#diamante2").data("valor", Math.floor((Math.random()*12)+1) );
+    $("#diamante3").data("valor", Math.floor((Math.random()*12)+1) );
+    $("#diamante4").data("valor", Math.floor((Math.random()*12)+1) );
+    $("#totals").text("0");
+    $("#ganados").text("Ganados: " + tu);
+    $("#perdidos").text("Perdidos: " + compu);
+
+}
+
+resetear();
+
+    $("#puntos1").text(Math.floor((Math.random()*107)+13));
+
+    $("#diamante1").data("valor", Math.floor((Math.random()*12)+1) );
+    $("#diamante2").data("valor", Math.floor((Math.random()*12)+1) );
+    $("#diamante3").data("valor", Math.floor((Math.random()*12)+1) );
+    $("#diamante4").data("valor", Math.floor((Math.random()*12)+1) );
+
+$(".imagenblanco").on("click", function(){
+    var valorm = $(this).data('valor');
+    scoretotal=valorm+scoretotal;
+    $("#totals").text(scoretotal);
+if( scoretotal === puntos){
+    tu= tu+1;
+    $("#ajugar").text("Ganaste !!!");
+    resetear();
+    
+}
+if( scoretotal > puntos){
+    compu=compu+1;
+    $("#ajugar").text("Perdiste !!!");
+    resetear()
+    
+}
+}
+);
+
+});
+
+    </script>
+    
+
+</body>
+</html>
